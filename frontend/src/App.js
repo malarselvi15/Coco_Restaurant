@@ -1,24 +1,47 @@
 import React from "react";
+import Navbar from "./components/Navbar";   // ✅ Add Navbar
+
 import Home from "./components/Home";
 import About from "./components/About";
-// import FeatureSection from "./components/FeatureSection";
 import TransparentSection from "./components/TransparentSection";
-// import Favorites from "./components/Favorites";
 import Testimonials from "./components/Testimonials";
 import MenuSection from "./components/MenuSection";
+import CateringEnquiry from "./components/CateringEnquiry";
+import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
+import FloatingCallButton from "./components/FloatingCallButton";
 
 function App() {
   return (
     <>
-     
-      <Home />
-      <About />
-      {/* <FeatureSection /> */}
+      <Navbar />
+
+      <section id="home">
+        <Home />
+      </section>
+
+      <section id="about">
+        <About />
+      </section>
+
       <TransparentSection />
-      {/* <Favorites /> */}
-      
-      <MenuSection />
+
+      <section id="menu">
+        <MenuSection />
+      </section>
+
       <Testimonials />
+
+      <section id="enquiry">
+        <CateringEnquiry />
+      </section>
+
+      <section id="contact">
+        <ContactSection />
+      </section>
+
+      <Footer />
+      <FloatingCallButton />
     </>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import Navbar from "./Navbar";
 import "../App.css";
 import restaurantVideo from "../assets/restaurant.mp4";
 
@@ -8,13 +7,30 @@ const Home = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.5; // Slow cinematic speed
+      videoRef.current.playbackRate = 0.5;
     }
   }, []);
 
+  // ✅ Scroll to Menu
+  const scrollToMenu = () => {
+    const element = document.getElementById("menu");
+
+    if (element) {
+      const navbarHeight = 90; // adjust if needed
+      const elementPosition =
+        element.getBoundingClientRect().top +
+        window.pageYOffset -
+        navbarHeight;
+
+      window.scrollTo({
+        top: elementPosition,
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
     <div className="home-container">
-      <Navbar />
 
       {/* Background Video */}
       <video
@@ -46,7 +62,10 @@ const Home = () => {
           and unforgettable dining moments.
         </p>
 
-        <button className="btn primary-btn line line-4">
+        <button
+          className="btn primary-btn line line-4"
+          onClick={scrollToMenu}
+        >
           View Menu
         </button>
       </div>
