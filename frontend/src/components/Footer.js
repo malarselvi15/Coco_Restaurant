@@ -5,7 +5,6 @@ import "../App.css";
 const Footer = () => {
   return (
     <footer className="lux-footer">
-
       <div className="lux-footer-container">
 
         {/* COLUMN 1 - BRAND */}
@@ -47,9 +46,32 @@ const Footer = () => {
           <div className="lux-line-small"></div>
 
           <div className="lux-social">
-            <a href="#"><FaInstagram /></a>
-            <a href="#"><FaFacebookF /></a>
-            <a href="#"><FaWhatsapp /></a>
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Instagram"
+            >
+              <FaInstagram />
+            </a>
+
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+            >
+              <FaFacebookF />
+            </a>
+
+            <a
+              href="https://wa.me/919876543210"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp"
+            >
+              <FaWhatsapp />
+            </a>
           </div>
         </div>
 
@@ -58,7 +80,6 @@ const Footer = () => {
       <div className="lux-footer-bottom">
         © 2026 COCO Family Restaurant — Crafted with Passion
       </div>
-
     </footer>
   );
 };
