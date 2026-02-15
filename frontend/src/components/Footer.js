@@ -27,7 +27,7 @@ const Footer = () => {
           <p>Santhosh Nagar Road</p>
           <p>Pudukottai, Tamil Nadu 628103</p>
           <p>+91 98765 43210</p>
-          <p>Open: 10 AM – 11 PM</p>
+          <p>Open: 24 Hours</p>
         </div>
 
         {/* COLUMN 3 - PAGES */}
@@ -78,7 +78,15 @@ const Footer = () => {
       </div>
 
       <div className="lux-footer-bottom">
-        © 2026 COCO Family Restaurant — Crafted with Passion
+        © 2026 COCO Family Restaurant | Powered by{" "}
+        <a
+          href="https://twintechy.com"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="twin-link"
+        >
+          Twin Technologies
+        </a>
       </div>
     </footer>
   );

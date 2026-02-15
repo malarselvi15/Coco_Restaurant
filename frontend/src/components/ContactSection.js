@@ -42,7 +42,7 @@ const ContactSection = () => {
 
             <div className="contact-small-box">
               <h4>🕒 Open Hours</h4>
-              <p>10:00 AM – 11:00 PM</p>
+              <p>24 Hours</p>
             </div>
 
           </div>

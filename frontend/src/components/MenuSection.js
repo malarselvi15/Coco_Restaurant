@@ -14,10 +14,10 @@ const menuItems = [
   { name: "Meals", image: meals },
   { name: "Salads", image: salads },
   { name: "Soup", image: soup },
-  { name: "Tandoory", image: tandoory },
-  { name: "Biriyani", image: biriyani },
+  { name: "Tandoori", image: tandoory },
+  { name: "Briyani", image: biriyani },
   { name: "Sea Foods", image: seafoods },
-  { name: "Eali Parata", image: ealiparata },
+  { name: "Elai Parotta", image: ealiparata },
   { name: "Desserts", image: desserts },
 ];
 
