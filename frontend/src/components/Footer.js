@@ -78,7 +78,7 @@ const Footer = () => {
       </div>
 
       <div className="lux-footer-bottom">
-        © 2026 COCO Family Restaurant | Powered by{" "}
+        © 2026 COCO Family Restaurant | Designed by{" "}
         <a
           href="https://twintechy.com"
           target="_blank"

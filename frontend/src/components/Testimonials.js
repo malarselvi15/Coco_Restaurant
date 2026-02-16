@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import "../App.css";
 import foodBg from "../assets/food-bg.webp";
 import avatar1 from "../assets/avatar1.jpg";
@@ -54,20 +54,29 @@ rating: 5,
 
 const [index,setIndex]=useState(0);
 
-useEffect(()=>{
-const interval=setInterval(()=>{
-nextSlide();
-},4000);
-return()=>clearInterval(interval);
-},[index]);
 
-const nextSlide=()=>{
+/* FIXED: useCallback added */
+const nextSlide=useCallback(()=>{
 setIndex((prev)=>(prev+1)%reviews.length);
-};
+},[reviews.length]);
+
 
 const prevSlide=()=>{
 setIndex((prev)=>(prev-1+reviews.length)%reviews.length);
 };
+
+
+/* FIXED: dependency updated */
+useEffect(()=>{
+
+const interval=setInterval(()=>{
+nextSlide();
+},4000);
+
+return()=>clearInterval(interval);
+
+},[nextSlide]);
+
 
 const visible=[
 reviews[index%reviews.length],
@@ -75,7 +84,9 @@ reviews[(index+1)%reviews.length],
 reviews[(index+2)%reviews.length],
 ];
 
+
 return(
+
 <section className="testimonials-section" style={{ backgroundImage: `url(${foodBg})` }}>
 
 <div className="testimonials-dark-overlay"></div>
@@ -84,32 +95,40 @@ return(
 
 <h2 className="testimonials-title">Our Happy Customers</h2>
 
-{/* LEFT BUTTON */}
+
 <button className="carousel-btn left" onClick={prevSlide}>
 &#10094;
 </button>
 
-{/* RIGHT BUTTON */}
+
 <button className="carousel-btn right" onClick={nextSlide}>
 &#10095;
 </button>
 
+
 <div className="testimonials-cards slider">
 
 {visible.map((review,i)=>(
+
 <div key={i} className="testimonial-card slide">
 
 <div className="stars">
+
 {Array(review.rating).fill().map((_,i)=>(
+
 <span key={i} className="star">★</span>
+
 ))}
+
 </div>
+
 
 <p className="testimonial-text">"{review.text}"</p>
 
 <h3 className="testimonial-name">{review.name}</h3>
 
 </div>
+
 ))}
 
 </div>
@@ -117,6 +136,7 @@ return(
 </div>
 
 </section>
+
 );
 
 };
