@@ -26,7 +26,7 @@ const Footer = () => {
           <div className="lux-line-small"></div>
           <p>Santhosh Nagar Road</p>
           <p>Pudukottai, Tamil Nadu 628103</p>
-          <p>+91 98765 43210</p>
+          <p>+91 82482 02464</p>
           <p>Open: 24 Hours</p>
         </div>
 
@@ -65,7 +65,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://wa.me/919876543210"
+              href="https://wa.me/918248202464"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="WhatsApp"

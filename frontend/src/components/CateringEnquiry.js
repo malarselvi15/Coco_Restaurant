@@ -20,7 +20,7 @@ setFormData({
 
 const handleSubmit=(e)=>{
 e.preventDefault();
-const whatsappNumber="919361753526";
+const whatsappNumber="918248202464";
 const text=`
 Catering Enquiry 🍽️
 

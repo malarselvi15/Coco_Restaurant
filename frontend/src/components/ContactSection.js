@@ -39,7 +39,7 @@ const ContactSection = () => {
               <h4>📞 Call Us</h4>
               <p>
   <a href="tel:+919876543210" className="call-link">
-    +91 98765 43210
+    +91 82482 02464
   </a>
 </p>
             </div>

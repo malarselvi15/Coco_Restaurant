@@ -5,7 +5,7 @@ import "../App.css";
 const FloatingCallButton = () => {
   return (
     <a
-      href="tel:+919361753526"   // 👉 Replace with your hotel number
+      href="tel:+918248202464"   // 👉 Replace with your hotel number
       className="floating-call-btn"
     >
       <FaPhoneAlt />
