@@ -38,8 +38,14 @@ const ContactSection = () => {
             <div className="contact-small-box">
               <h4>📞 Call Us</h4>
               <p>
+  <a href="tel:+917358198927" className="call-link">
+              +91 73581 98927 
+  </a>
+</p>
+
+ <p>
   <a href="tel:+919876543210" className="call-link">
-    +91 82482 02464
+              +91 98765 43210
   </a>
 </p>
             </div>

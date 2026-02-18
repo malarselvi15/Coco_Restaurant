@@ -26,6 +26,7 @@ const Footer = () => {
           <div className="lux-line-small"></div>
           <p>Santhosh Nagar Road</p>
           <p>Pudukottai, Tamil Nadu 628103</p>
+          <p>+91 73581 98927</p>
           <p>+91 82482 02464</p>
           <p>Open: 24 Hours</p>
         </div>
