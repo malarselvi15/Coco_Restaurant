@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import "../App.css";
-import restaurantVideo from "../assets/restaurant.mp4";
+import restaurantVideo from "../assets/video2.mp4";
 
 const Home = () => {
   const videoRef = useRef(null);
