@@ -7,7 +7,7 @@ const Home = () => {
 
   useEffect(() => {
     if (videoRef.current) {
-      videoRef.current.playbackRate = 0.6;
+      videoRef.current.playbackRate = 1.2; // Increased speed
     }
   }, []);
 
