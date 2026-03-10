@@ -11,6 +11,371 @@ html {
   scroll-behavior: smooth;
 }
 
+
+/* ================= video home ================= */
+
+
+/* Container */
+
+.home-container{
+  position:relative;
+  width:100%;
+  height:100vh;
+  overflow:hidden;
+}
+
+/* Background Video */
+
+.background-video{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+
+  z-index:-2;
+
+  /* remove zoom feeling */
+  transform:scale(1);
+
+  /* improve brightness */
+  filter:brightness(1.15) contrast(1.1) saturate(1.1);
+}
+
+/* Overlay */
+
+.overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+
+  background:rgba(0,0,0,0.35);
+  z-index:-1;
+}
+
+/* Content */
+
+.home-content{
+  position:relative;
+  height:100%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+
+  text-align:center;
+  color:white;
+
+  padding:20px;
+}
+
+/* Title */
+
+.line-1{
+  font-size:64px;
+  font-weight:700;
+}
+
+.line-1 span{
+  color:#ffb347;
+}
+
+/* Subtitle */
+
+.line-2{
+  font-size:36px;
+  margin-top:10px;
+}
+
+/* Description */
+
+.line-3{
+  margin-top:15px;
+  font-size:18px;
+  max-width:600px;
+}
+
+/* Button */
+
+.primary-btn{
+  margin-top:25px;
+  padding:12px 30px;
+
+  font-size:16px;
+  border:none;
+  border-radius:6px;
+
+  background:#ffb347;
+  color:black;
+
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.primary-btn:hover{
+  background:#ffa726;
+}
+
+/* ---------------- */
+/* CINEMATIC FADE ANIMATION */
+/* ---------------- */
+
+.fade-up{
+  opacity:0;
+  transform:translateY(40px);
+  animation:fadeUp 1s ease forwards;
+}
+
+.delay-1{
+  animation-delay:0.5s;
+}
+
+.delay-2{
+  animation-delay:1s;
+}
+
+.delay-3{
+  animation-delay:1.5s;
+}
+
+@keyframes fadeUp{
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* ---------------- */
+/* RESPONSIVE */
+/* ---------------- */
+
+@media(max-width:1024px){
+
+.line-1{
+font-size:48px;
+}
+
+.line-2{
+font-size:28px;
+}
+
+}
+
+@media(max-width:768px){
+
+.line-1{
+font-size:34px;
+}
+
+.line-2{
+font-size:22px;
+}
+
+.line-3{
+font-size:15px;
+}
+
+.primary-btn{
+padding:10px 20px;
+font-size:14px;
+}
+
+}
+
+/* ================= Gallery ================= */
+/* ========================= */
+/* Gallery Section */
+/* ========================= */
+
+.gallery-section{
+padding:80px 8%;
+background:#f9f9f9;
+text-align:center;
+}
+
+/* Title */
+
+.gallery-title{
+font-size:42px;
+color:#c49b63;
+margin-bottom:50px;
+font-weight:600;
+}
+
+/* Card */
+
+.gallery-card{
+border-radius:14px;
+overflow:hidden;
+background:white;
+box-shadow:0 8px 20px rgba(0,0,0,0.08);
+transition:0.4s;
+}
+
+/* Desktop Image */
+
+.gallery-card img{
+width:100%;
+height:300px;
+object-fit:cover;   /* Desktop good look */
+transition:0.5s;
+}
+
+/* Hover */
+
+.gallery-card:hover img{
+transform:scale(1.08);
+}
+
+/* ========================= */
+/* Swiper Navigation Arrows */
+/* ========================= */
+
+.swiper-button-next,
+.swiper-button-prev{
+color:#c49b63 !important;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after{
+font-size:28px;
+font-weight:bold;
+color:#c49b63 !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover{
+color:#a67c42 !important;
+}
+
+/* ========================= */
+/* Pagination Dots */
+/* ========================= */
+
+.swiper-pagination-bullet{
+background:#ccc !important;
+opacity:1;
+}
+
+.swiper-pagination-bullet-active{
+background:#c49b63 !important;
+}
+
+/* ========================= */
+/* Tablet */
+/* ========================= */
+
+@media(max-width:1024px){
+
+.gallery-title{
+font-size:34px;
+}
+
+.gallery-card img{
+height:240px;
+object-fit:contain; /* show full image */
+background:white;
+}
+
+}
+
+/* ========================= */
+/* Mobile */
+/* ========================= */
+
+@media(max-width:768px){
+
+.gallery-section{
+padding:60px 5%;
+}
+
+.gallery-title{
+font-size:28px;
+}
+
+.gallery-card img{
+height:220px;
+object-fit:contain;
+background:white;
+}
+
+}
+
+/* ========================= */
+/* Small Mobile */
+/* ========================= */
+
+@media(max-width:480px){
+
+.gallery-title{
+font-size:24px;
+}
+
+.gallery-card img{
+height:200px;
+object-fit:contain;
+background:white;
+}
+
+}
+
+/* ================= MENU CARD ANIMATION ================= */
+
+.menu-card{
+position:relative;
+overflow:hidden;
+border-radius:12px;
+cursor:pointer;
+transition:transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.menu-card img{
+width:100%;
+height:250px;
+object-fit:cover;
+transition:transform 0.6s ease;
+}
+
+/* Hover animation */
+
+.menu-card:hover{
+transform:translateY(-10px);
+box-shadow:0 12px 30px rgba(0,0,0,0.2);
+}
+
+.menu-card:hover img{
+transform:scale(1.1);
+}
+
+/* Overlay */
+
+.menu-overlay{
+position:absolute;
+bottom:0;
+left:0;
+width:100%;
+height:100%;
+background:linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+display:flex;
+align-items:flex-end;
+justify-content:center;
+opacity:0;
+transition:0.4s;
+}
+
+.menu-card:hover .menu-overlay{
+opacity:1;
+}
+
+.menu-overlay h3{
+color:white;
+font-size:20px;
+margin-bottom:20px;
+}
 /* ================= NAVBAR ================= */
 
 .navbar {

@@ -10,6 +10,8 @@ import CateringEnquiry from "./components/CateringEnquiry";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 import FloatingCallButton from "./components/FloatingCallButton";
+import Gallery from "./components/Gallery";
+
 
 function App() {
   return (
@@ -30,11 +32,15 @@ function App() {
         <MenuSection />
       </section>
 
+        <Gallery />
+
       <Testimonials />
 
       <section id="enquiry">
         <CateringEnquiry />
       </section>
+
+    
 
       <section id="contact">
         <ContactSection />

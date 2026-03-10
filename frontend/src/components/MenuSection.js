@@ -1,5 +1,7 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../App.css";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 import meals from "../assets/menu/meals.jpg";
 import salads from "../assets/menu/salads.jpg";
@@ -22,27 +24,50 @@ const menuItems = [
 ];
 
 const MenuSection = () => {
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  }, []);
+
   return (
-    <section className="menu-section">
+    <section id="menu" className="menu-section">
+
       <div className="menu-container">
 
-        <h2 className="menu-title">Our Special Menu</h2>
-        <p className="menu-subtitle">
+        <h2 className="menu-title" data-aos="fade-up">
+          Our Special Menu
+        </h2>
+
+        <p className="menu-subtitle" data-aos="fade-up" data-aos-delay="200">
           Discover our delicious varieties
         </p>
 
         <div className="menu-grid">
+
           {menuItems.map((item, index) => (
-            <div className="menu-card" key={index}>
+            <div
+              className="menu-card"
+              key={index}
+              data-aos="zoom-in"
+              data-aos-delay={index * 100}
+            >
+
               <img src={item.image} alt={item.name} />
+
               <div className="menu-overlay">
                 <h3>{item.name}</h3>
               </div>
+
             </div>
           ))}
+
         </div>
 
-        <div className="menu-btn-container">
+        <div className="menu-btn-container" data-aos="fade-up" data-aos-delay="300">
+
           <a
             href="/menu.pdf"
             target="_blank"
@@ -51,9 +76,11 @@ const MenuSection = () => {
           >
             View Full Menu (PDF)
           </a>
+
         </div>
 
       </div>
+
     </section>
   );
 };

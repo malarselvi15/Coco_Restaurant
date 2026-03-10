@@ -45,6 +45,7 @@ return(
 <li onClick={()=>scrollToSection("home")}>Home</li>
 <li onClick={()=>scrollToSection("about")}>About Us</li>
 <li onClick={()=>scrollToSection("menu")}>Menu</li>
+<li onClick={()=>scrollToSection("gallery")}>Gallery</li>
 <li onClick={()=>scrollToSection("enquiry")}>Enquiry</li>
 <li onClick={()=>scrollToSection("contact")}>Contact</li>
 

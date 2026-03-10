@@ -48,7 +48,7 @@ const Footer = () => {
 
           <div className="lux-social">
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/cocorestaurantcatering?igsh=bnJlZmFyZW9sODBs"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Instagram"
