@@ -44,8 +44,8 @@ const ContactSection = () => {
 </p>
 
  <p>
-  <a href="tel:+919876543210" className="call-link">
-              +91 98765 43210
+  <a href="tel:+918248202464" className="call-link">
+              +91 82482 02464
   </a>
 </p>
             </div>

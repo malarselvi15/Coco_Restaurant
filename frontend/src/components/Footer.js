@@ -37,7 +37,7 @@ const Footer = () => {
           <div className="lux-line-small"></div>
           <a href="#home">Home</a>
           <a href="#menu">Menu</a>
-          <a href="#catering">Catering</a>
+          <a href="#enquiry">Catering</a>
           <a href="#contact">Contact</a>
         </div>
 
@@ -57,7 +57,7 @@ const Footer = () => {
             </a>
 
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/share/1BDg1oyUWh/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
